@@ -41,13 +41,16 @@ function homePage(){
     });
 
     document.querySelector("#coding-grid button").addEventListener('click',()=>{
-        window.location.href = 'coding.html';
+        window.location.href = '/pages/coding.html';
+    })
+    document.querySelector("#ui-grid button").addEventListener('click',()=>{
+        window.location.href = '/pages/ux-ui.html';
     })
     document.querySelector("#proj-grid button").addEventListener('click',()=>{
-        window.location.href = 'proj-manage.html';
+        window.location.href = '/pages/proj-manage.html';
     })
     document.querySelector("#cert-item button").addEventListener('click',()=>{
-        window.location.href = 'certificates.html';
+        window.location.href = '/pages/certificates.html';
     })
 
 
@@ -80,6 +83,8 @@ function homePage(){
         document.querySelector('.side-two').innerHTML="<div class='GBmsg'><h2 class='specialText title'>Thank You!</h2> <p>you will hear back from me shortly!</p></div>";
         this.reset();
     });
+
+        // THE END CONFETTI
 
     document.getElementById('no').addEventListener('change', (event)=>{
         console.log(event);
@@ -255,6 +260,11 @@ function projectPages(){
         });
         
     });
+
+    document.getElementById('see-all-code').addEventListener('click',()=>{
+        window.location.href="/pages/coding.html";        
+    });
+    
 }
 
 function feedbackPage(){
