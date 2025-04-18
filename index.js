@@ -88,101 +88,123 @@ function homePage(){
 
     document.getElementById('no').addEventListener('change', (event)=>{
         console.log(event);
-        document.querySelector('#contact-grid').style.flex = '1'; // Reset flex size
+        document.querySelector('#contact').style.flex = '1 1 0'; // Reset flex size
         document.querySelector('#contact-grid').classList.add('hidden'); // Hide grid content
-        document.querySelector('#blank-grid').style.flex = '25'; 
+
+        document.querySelector('#blank').style.flex = '25 1 0%'; 
         document.querySelector('#blank-grid').classList.remove('hidden');
 
     })
+    document.getElementById('sure').addEventListener('change', (event)=>{
+        console.log(event);
+        document.querySelector('#contact').style.flex = '1 1 0'; 
+        document.querySelector('#contact-grid').classList.add('hidden'); 
+        
+        document.querySelector('#feedback').style.flex = '25 1 0%'; 
+        document.querySelector('#feedback-grid').classList.remove('hidden');
 
-    const confettiBtn = document.getElementById('blank-grid');
-    const confettiCanvas = document.getElementById('confetti-canvas');
-    const ctx = confettiCanvas.getContext('2d');
+    })
+    document.getElementById('yes').addEventListener('change', (event)=>{
+        console.log(event);
+        document.querySelector('#contact').style.flex = '1 1 0';
+        document.querySelector('#contact-grid').classList.add('hidden'); 
+        
+        document.querySelector('#feedback').style.flex = '25 1 0%'; 
+        document.querySelector('#feedback-grid').classList.remove('hidden');
+        //add animation here, like confetti, but a diff confetti than the other
 
-    confettiCanvas.width = window.innerWidth;
-    confettiCanvas.height = window.innerHeight;
+    })
 
-    const confettiCount = 300;
-    const confetti = [];
-    let animationId;
-    let isAnimating = false;
 
-    function random(min, max) {
-        return Math.random() * (max - min) + min;
-    }
 
-    function initConfetti() {
-        confetti.length = 0; // Clear existing confetti
-        for (let i = 0; i < confettiCount; i++) {
-            confetti.push({
-                x: random(0, confettiCanvas.width),
-                y: random(0, confettiCanvas.height) - confettiCanvas.height,
-                r: random(2, 6),
-                d: random(15, 25),
-                color: `hsl(${random(0, 360)}, 100%, 50%)`,
-                tilt: random(-10, 10),
-                tiltAngleIncremental: random(0.05, 0.12),
-                tiltAngle: 0
-            });
-        }
-    }
+//     const confettiBtn = document.getElementById('blank-grid');
+//     const confettiCanvas = document.getElementById('confetti-canvas');
+//     const ctx = confettiCanvas.getContext('2d');
 
-    function drawConfetti() {
-        ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-        confetti.forEach((c, i) => {
-            c.tiltAngle += c.tiltAngleIncremental;
-            c.y += (Math.cos(c.d) + 1 + c.r) / 2;
-            c.x += Math.sin(c.d);
+//     confettiCanvas.width = window.innerWidth;
+//     confettiCanvas.height = window.innerHeight;
 
-            ctx.beginPath();
-            ctx.lineWidth = c.r;
-            ctx.strokeStyle = c.color;
-            ctx.moveTo(c.x + c.tilt + c.r / 4, c.y);
-            ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 4);
-            ctx.stroke();
+//     const confettiCount = 300;
+//     const confetti = [];
+//     let animationId;
+//     let isAnimating = false;
 
-            if (c.y > confettiCanvas.height) {
-                confetti[i] = {
-                    x: random(0, confettiCanvas.width),
-                    y: random(0, confettiCanvas.height) - confettiCanvas.height,
-                    r: c.r,
-                    d: c.d,
-                    color: c.color,
-                    tilt: c.tilt,
-                    tiltAngleIncremental: c.tiltAngleIncremental,
-                    tiltAngle: c.tiltAngle
-                };
-            }
-        });
-    }
+//     function random(min, max) {
+//         return Math.random() * (max - min) + min;
+//     }
 
-    function updateConfetti() {
-        drawConfetti();
-        animationId = requestAnimationFrame(updateConfetti);
-    }
+//     function initConfetti() {
+//         confetti.length = 0; // Clear existing confetti
+//         for (let i = 0; i < confettiCount; i++) {
+//             confetti.push({
+//                 x: random(0, confettiCanvas.width),
+//                 y: random(0, confettiCanvas.height) - confettiCanvas.height,
+//                 r: random(2, 6),
+//                 d: random(15, 25),
+//                 color: `hsl(${random(0, 360)}, 100%, 50%)`,
+//                 tilt: random(-10, 10),
+//                 tiltAngleIncremental: random(0.05, 0.12),
+//                 tiltAngle: 0
+//             });
+//         }
+//     }
 
-    function toggleConfetti() {
-        if (isAnimating) {
-            cancelAnimationFrame(animationId);
-            isAnimating = false; // Reset the animation state
-            confettiCanvas.style.opacity = 0;
-            setTimeout(() => {
-                ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-                confettiCanvas.style.opacity = 1;
-            }, 1500);
-            confettiBtn.textContent = "Get Started";
-        } else {
-            initConfetti();
-            updateConfetti();
-            isAnimating = true;
-            confettiCanvas.style.opacity = 1;
-            confettiBtn.textContent = "Stop Confetti";
-        }
-    }
+//     function drawConfetti() {
+//         ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+//         confetti.forEach((c, i) => {
+//             c.tiltAngle += c.tiltAngleIncremental;
+//             c.y += (Math.cos(c.d) + 1 + c.r) / 2;
+//             c.x += Math.sin(c.d);
+
+//             ctx.beginPath();
+//             ctx.lineWidth = c.r;
+//             ctx.strokeStyle = c.color;
+//             ctx.moveTo(c.x + c.tilt + c.r / 4, c.y);
+//             ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 4);
+//             ctx.stroke();
+
+//             if (c.y > confettiCanvas.height) {
+//                 confetti[i] = {
+//                     x: random(0, confettiCanvas.width),
+//                     y: random(0, confettiCanvas.height) - confettiCanvas.height,
+//                     r: c.r,
+//                     d: c.d,
+//                     color: c.color,
+//                     tilt: c.tilt,
+//                     tiltAngleIncremental: c.tiltAngleIncremental,
+//                     tiltAngle: c.tiltAngle
+//                 };
+//             }
+//         });
+//     }
+
+//     function updateConfetti() {
+//         drawConfetti();
+//         animationId = requestAnimationFrame(updateConfetti);
+//     }
+
+//     function toggleConfetti() {
+//         if (isAnimating) {
+//             cancelAnimationFrame(animationId);
+//             isAnimating = false; // Reset the animation state
+//             confettiCanvas.style.opacity = 0;
+//             setTimeout(() => {
+//                 ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+//                 confettiCanvas.style.opacity = 1;
+//             }, 1500);
+//             confettiBtn.textContent = "Get Started";
+//         } else {
+//             initConfetti();
+//             updateConfetti();
+//             isAnimating = true;
+//             confettiCanvas.style.opacity = 1;
+//             confettiBtn.textContent = "Stop Confetti";
+//         }
+//     }
     
     
-    // Add event listener to the button
-    confettiBtn.addEventListener('click', toggleConfetti);
+//     // Add event listener to the button
+//     confettiBtn.addEventListener('click', toggleConfetti);
 
 }
 
