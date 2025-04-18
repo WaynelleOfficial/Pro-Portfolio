@@ -1,9 +1,8 @@
 
 /* GENERAL SETTINGS */
-/* .html{
-    height: 100vh;
-    width: 100vh;
-} */
+.html{
+    background-color: #9A609A;
+}
 .specialText{
     font-family: "Montagu Slab", serif;
     font-style: bold;
