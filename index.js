@@ -41,7 +41,7 @@ function homePage(){
     });
 
     document.querySelector("#coding-grid button").addEventListener('click',()=>{
-        window.location.href = '/pages/coding.html';
+        window.location.href = './pages/coding.html';
     })
     document.querySelector("#ui-grid button").addEventListener('click',()=>{
         window.location.href = '/pages/ux-ui.html';
