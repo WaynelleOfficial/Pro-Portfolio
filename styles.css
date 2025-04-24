@@ -1052,6 +1052,12 @@ canvas {
 }
 
                                 /* FEEDBACK & CONTACT ALL PAGE*/
+#contactThx{
+    color: var(--bkg-sc-1);
+    padding-left: 11%;
+    font-size: 1.2rem;
+    overflow: scroll;
+}
 #feedback-grid-all{
     height: -webkit-fill-available;
     width: -webkit-fill-available;
@@ -1211,7 +1217,6 @@ input[type="radio" i]:checked{
     height: 27px;
     background-color: var(--light-text);
     border: 5.5px solid var(--dark-text);
-    
 
 }
 

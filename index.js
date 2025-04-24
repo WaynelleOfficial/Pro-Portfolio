@@ -80,7 +80,7 @@ function homePage(){
 
     document.getElementById('contact-form').addEventListener('submit',function(event){
         event.preventDefault();
-        document.querySelector('.side-two').innerHTML="<div class='GBmsg'><h2 class='specialText title'>Thank You!</h2> <p>you will hear back from me shortly!</p></div>";
+        document.querySelector('.side-two').innerHTML="<div class='GBmsg'><h2 class='specialText title'>Thank You!</h2> <p id='contactThx'>   you will hear back from me shortly!</p></div>";
         this.reset();
     });
 
