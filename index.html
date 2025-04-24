@@ -197,7 +197,7 @@
 
                         </div> -->
                     </div>
-                    <button class="specialText" onclick="window.location.href='./pages/ux-ui.html'">See All</button>
+                    <button class="specialText">See All</button>
                 </div>
             </div>
 
@@ -229,7 +229,7 @@
                             <img alt=""/>
                         </div>
                     </div>
-                    <button class="specialText" onclick="window.location.href='./pages/proj-manage.html'">See Case Studies</button>
+                    <button class="specialText">See Case Studies</button>
                 </div>
         
             </div>
@@ -257,7 +257,7 @@
                         <img alt="AWS Certified Cloud Practitioner"/>
                         <img alt="Udemy: The Complete Full-Stack Web Development Bootcamp"/>
                     </div>
-                    <button class="specialText" onclick="window.location.href='./pages/certificates.html'">See Details</button>
+                    <button class="specialText" >See Details</button>
                 </div>
             </div>
 
@@ -380,22 +380,21 @@
                             <h2 class="specialText title">like what you see? <br/>lets get in contact:</h2>
                             <!-- name="contact-form" -->
                             <form action="https://formspree.io/f/meoabyon" method="POST" id="contact-form">
-                                <!-- for(label) and id (input) are linked -->
-                                <label for="fName">first name*:</label><br/>
+                                <!-- for(label) and id(input) are linked -->
+                                <label for="fName">First name*:</label><br/>
                                 <input type="text" placeholder="Jelly" name="fName" id="fName" required/><br/>
-
-                                <label for="LName">last name:</label><br/>
+                              
+                                <label for="LName">Last name:</label><br/>
                                 <input type="text" placeholder="Bean" name="LName" id="LName"/><br/>
-
-                                <label for="email">email*:</label><br/>
+                              
+                                <label for="email">Email*:</label><br/>
                                 <input type="email" placeholder="jellyBean153@gmail.com" name="email" id="email" required/><br/>
-
-                                <label for="message">message*:</label><br/>
-                                <!-- <input type="reset" value="Reset"> -->
+                              
+                                <label for="message">Message*:</label><br/>
                                 <textarea placeholder="We would love to hire you!" name="message" id="message" required></textarea><br/>
-
+                              
                                 <button type="submit" aria-label="Submit the contact form">Submit</button>
-                            </form>
+                              </form>
                         </div>
                     </div>
                     <div class="bottom">
@@ -437,18 +436,18 @@
                 <p>Feedback</p>
                 <div class="ac-it-grid hidden" id="feedback-grid">
                     <h2 class="specialText title">Feedback</h2>
-                    <form name="feedback-form" action="https://formspree.io/f/mqapvrad" method="POST" target="" id="feedback-form">
+                    <form name="feedback-form" action="https://formspree.io/f/mqapvrad" method="POST" id="feedback-form">
                         <label for="notHere">Is there information you were looking for that you weren't able to find?</label><br/>
-                        <input type="text" id="notHereFB"/><br/>
+                        <input type="text" id="notHereFB" name="missing_info"/><br/>
 
                         <label for="navFB">How was the navigation and accessibility of my website? Was there difficulty in a specific area?</label><br/>
-                        <input type="text" id="navFB"/><br/>
+                        <input type="text" id="navFB" name="navigation_feedback"/><br/>
 
                         <label for="suggFB">Suggestions for areas of improvement:</label><br/>
-                        <input type="text" id="suggFB"/><br/>
+                        <input type="text" id="suggFB" name="suggestions"/><br/>
 
                         <label for="otherFB">Other:</label><br/>
-                        <textarea id="otherFB"></textarea><br/>
+                        <textarea id="otherFB"  name="other_comments"></textarea><br/>
 
                         <button type="submit" aria-label="Submit the feedback form">Submit</button>
                     </form>

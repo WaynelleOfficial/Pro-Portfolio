@@ -44,13 +44,13 @@ function homePage(){
         window.location.href = './pages/coding.html';
     })
     document.querySelector("#ui-grid button").addEventListener('click',()=>{
-        window.location.href = '/pages/ux-ui.html';
+        window.location.href = './pages/ux-ui.html';
     })
     document.querySelector("#proj-grid button").addEventListener('click',()=>{
-        window.location.href = '/pages/proj-manage.html';
+        window.location.href = './pages/proj-manage.html';
     })
     document.querySelector("#cert-item button").addEventListener('click',()=>{
-        window.location.href = '/pages/certificates.html';
+        window.location.href = './pages/certificates.html';
     })
 
 
