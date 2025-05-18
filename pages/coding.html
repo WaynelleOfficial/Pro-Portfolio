@@ -89,6 +89,153 @@
 
         <div class="c-projects-all">
 
+            <div class="code-proj buiz-goal-ai" id ="buiz-ai">
+                <h2 class="specialText">BuizGoals AI</h2>
+                <button class="specialText try disabled">Try It!</button>
+                <div class="c-top">
+                    <b><h3>Description:</h3></b> 
+                    <p>During a 48-hour hackathon hosted by the UCI AI Club in partnership with AWS, I was challenged to develop an application that 
+                        either enhanced productivity through cloud infrastructure or create a searchable knowledge base or create a data explorer for personal/academic use.
+                    </p>
+                    <p>
+                        Given the time constraints, I chose to tackle a challenge faced by small business owners: staying productive and making meaningful progress toward their goals. 
+                        The result was BuizGoals AI, an AI-powered tool designed to help entrepreneurs set and achieve actionable objectives.
+                    </p>
+                    <p>
+                        BuizGoals AI enhances productivity by generating S.M.A.R.T. goals (Specific, Measurable, Achievable, Relevant, Time-bound), tailored to each user's business aspirations. The application leverages 
+                        cloud-based AI services, AWS Bedrock, to guide users with clear, achievable steps, thus making long-term progress more manageable and time-effective for small business owners.
+                    </p>
+                </div>
+
+                <div class="c-details">
+                    <b><h3>Tech:</h3></b><p>GitHub, React, Node, Html, CSS, JavaScript, Python, ASW Bedrock, FastAPI, Next.js</p>
+                    <img class="tech-img" src="../assets/tech/tech-buiz-ai.png"/><br/>
+                    <b><h3>App Demo:</h3></b> 
+                    <p>
+                        This video showcases BuizGoals AI. 
+                    </p>
+                    <p>The app receives a user prompt through a responsive frontend built with React, Next.js, HTML, CSS, and JavaScript. I used Next.js for efficient routing and server-side rendering, ensuring fast load times and a dynamic user experience.
+                        When a prompt is submitted, it's routed to the backend, where I implemented an AI service layer using Python and FastAPI. This service securely communicates with AWS Bedrock, leveraging the capabilities of Anthropic’s Claude v2 to generate context-aware, S.M.A.R.T. goals tailored to the user's input.
+                        The generated response is then sent back through the API and seamlessly rendered on the frontend using React components.
+                        All code is version-controlled and collaboratively managed on GitHub, enabling streamlined development, CI/CD, and deployment integration.
+                    </p>
+                    <p>
+                        This project demonstrates a full-stack, cloud-integrated architecture combining modern frameworks and AI services to deliver a practical, productivity-focused solution.
+                    </p>
+                    <video class="lazy" controls  width="480">
+                        <source src="/assets/v/Full-Demo.mp4" type="video/mp4">
+                        <source src="/assets/v/Full-Demo.mov" type="video/mov">
+                        <!-- <source data-src="video.webm" type="video/webm"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- <b><h3>Github (upon request):</h3></b><a href="https://github.com/WaynelleOfficial/Smart-AI">https://github.com/WaynelleOfficial/Smart-AI</a><br/><br/> -->
+                </div>
+
+                <div class="c-more">
+                    <button class="deets specialText" >More Details</button>
+                </div>
+
+
+                <div class="c-extra hidden">
+                    <b><h3>Process:</h3></b> 
+                    <p>
+                        <a href="./coding.html#c-bzzzAI-brainstorm">Brainstorm</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg>
+                        <a href="./coding.html#c-bzzzAI-api">API Reading</a> <svg width="50" height="10">
+                        <!-- <a href="./coding.html#c-ex-fi">Coding</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="./coding.html#c-ex-req">Requirements Document</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="">Architecture Diagram</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="">Design Refinement: Feedback and Iterations</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="">Testing (QA)</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="">UX</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg> -->
+                        <!-- <a href="">Comments from beta users</a> -->
+                    </p>
+                    <section class="c-extra-P" id="c-bzzzAI-brainstorm">
+                        <h4>Brainstorm</h4>
+                        <p>
+                            When brainstorming ideas, I focused on areas where people often struggle with productivity. I drew inspiration from my own experience—specifically my participation in the Side Hustle Challenge hosted by the Anteater Entrepreneurship Center.
+                            Throughout the challenge, I often found myself with a vague goal in mind but no clear, actionable steps to bring it to life. I noticed that my peers and I would frequently get stuck—not due to lack of motivation, but due to a lack of structure and clarity in our next steps.
+                            This observation led me to the idea for BuizGoals AI: a tool designed to help individuals, especially entrepreneurs and small business owners, turn their ideas into concrete, achievable goals and stay consistently productive.
+                        </p>
+                    </section>
+
+
+                    <section class="c-extra-P" id="c-bzzzAI-api">
+                        <h4>Research and API Reading</h4>
+                        <p>
+                            I dedicated the initial phase of the hackathon to thoroughly reviewing documentation to better understand the technologies I planned to use.
+                            I also atteneded workshops hosted by AWS solution architects. 
+                            Some of the most helpful resources I consulted included:                        
+                        </p>
+                        <li>
+                            <ul> <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/inference.html" target="_blank" rel="noopener noreferrer">Bedrock</a> </ul>
+                            
+                            <ul> <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/getting-started-console.html" target="_blank" rel="noopener noreferrer">Bedrock Playgrounds</a> </ul>
+                            <ul> <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-engineering-guidelines.html" target="_blank" rel="noopener noreferrer">Prompt Engineering</a> </ul>
+                            <ul> <a href="https://docs.aws.amazon.com/code-library/latest/ug/python_3_bedrock-runtime_code_examples.html">Bedrock and Python</a> </ul>
+                            <ul> <a href="https://medium.com/genai-io/aws-bedrock-quick-setup-with-boto3-94ba0d0088ca">Bedrock and Python</a> </ul>
+                            <ul> <a href="https://github.com/build-on-aws/python-fm-playground/blob/main/backend/chat_playground/routes.py">Bedrock Example</a> </ul>
+                            <ul> <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-runtime/client/invoke_model.html#">Bedrock API</a> </ul>
+                            <ul> <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.htmll">Prompt Caching</a> </ul>
+                        </li>
+                    </section>
+
+                    
+
+
+
+                    <b><h3>Conclusion:</h3></b>
+                        <p>
+                            <a href="./coding.html#c-bzzzAI-contribution">Contribution</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg>
+                            <a href="./coding.html#c-bzzzAI-chall">Challenges and Lessons Learned</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg>
+                            <a href="./coding.html#c-bzzzAI-next">Next Steps</a> <svg width="50" height="10"></svg>
+                        </p>
+
+                
+                    <section class="c-extra-C" id="c-bzzzAI-contribution">
+                        <h4>My contribution:</h4>
+                        <p>
+                            Although the competition allowed teams of up to three members, my teammate fell ill just before the event began. 
+                            I chose to move forward independently, taking on the full scope of the project—from ideation and development to deployment alone.
+                        </p>
+                    </section> 
+
+                    <section class="c-extra-C" id="c-ex-chall">
+                        <h4>Challenges and Lessons Learned:</h4>
+                        <li>
+                            <ul><b>Challenges:</b></ul>
+                            <ul>
+                                One of the primary challenges I faced was frequent access denials due to improperly formatted API requests. 
+                                Debugging these issues was time-consuming, especially given the rigid formatting requirements and the complexity of the documentation, often involving deeply nested structures. 
+                                Working within a tight 48-hour timeframe and without the support of a full team added to the difficulty, requiring me to stay focused and preservere under pressure.
+                            </ul>
+                                
+                            <ul><b>Lessons Learned:</b></ul>
+                            <ul>
+                                Despite the challenges, the experience was highly rewarding. I gained hands-on knowledge in prompt engineering, API integration, and working with Next.js. 
+                                I also became more confident in reading and interpreting complex API documentation. 
+                            </ul>
+                        </li>
+                       
+                        </p>
+                    </section>
+
+                    <section class="c-extra-C" id="c-ex-next">
+                        <h4>Next Steps:</h4>
+                        <p>
+                            Understanding that this is a hackathon, I no longer have free acess to the AWS stack so I can not continue developing my app.
+                            However, I will continue reading documentation to deepen my knoweldege on topics I discovered when creating BuizAI Goals.
+                        </p><br/>
+                    </section>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+            
             <div class="code-proj" id ="sw-msg">
                 <h2 class="specialText">Sweet Messages</h2>
                 <button class="specialText try disabled">Try It!</button>
@@ -99,6 +246,7 @@
                 </div>
                 <div class="c-details">
                     <b><h3>Tech:</h3></b><p>Figma, JavaScript, Html, Css, PostGreSQL</p>
+                    <img class="tech-img" src="../assets/tech/tech-sw-msg.png"/><br/>
                     <b><h3>App Demo:</h3></b> 
                     <p>The landing page gives the user the option to get a random postive message or to delve deeper into the site to find a specific message based on their plight at that moment.</p>
                     <p>These topics encompassed the themes of most peoples worries and each page has its own UI theme, UI simplification. Featuring both videos and images</p></br>
@@ -185,13 +333,13 @@
                         <a href="./coding.html#c-swmsg-chall">Challenges and Lessons Learned</a> <svg width="50" height="10"><use href="#arrow-svg"></use></svg>
                         <a href="./coding.html#c-swmsg-next">Next Steps</a> <svg width="50" height="10"></svg>
                     </p>
-                    <section class="c-extra-C" id="c-ex-impact">
+                    <section class="c-extra-C" id="c-swmsg-impact">
                         <h4>Impact:</h4>
                         <p>So far, it has been an internal resource that I share the link to when someone in my circle needs upliftment. All feedback has been positive, and 
                             they deeply appreciate the words of encourgement. 
                         </p>
                     </section>
-                    <section class="c-extra-C" id="c-ex-chall">
+                    <section class="c-extra-C" id="c-swmsg-chall">
                         <h4>Challenges and Lessons Learned:</h4>
                         <li>
                             <ul><b>Transitioning to PostGreSQL:</b></ul>
@@ -236,7 +384,7 @@
 
                 <div class="c-details">
                     <b><h3>Tech:</h3></b><p>Figma, GitHub, Amazon Connect, React, Node, JavaScript/JavaScript XML (JS/JSX), Bootstrap/Material Design</p>
-                    <img class="tech-img" src="../assets/tech.png"/><br/>
+                    <img class="tech-img" src="../assets/tech/tech-aws-game.png"/><br/>
                     <b><h3>App Demo:</h3></b> 
                     <p>The leaderboard is intended to be displayed on a large central screen, showing the top five agents for each metric. This discourages toxicity toward those below the top 5 as well as informing them who may be able to help them improve if they are struggling.</p>
                     <p>The supervisor dashboard provides full visibility into team members' performance data, enabling effective monitoring. Supervisors can create challenges to foster teamwork, award trophies to agents, and access a full team leaderboard for a holistic view of all members, not just the top 5.</p>
