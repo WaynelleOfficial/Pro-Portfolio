@@ -407,9 +407,9 @@ h2{
 #about-grid img{
     padding-left: 3%;
     width: 359px;
-    height: 489px;
+    /* height: 489px; */
     position: relative;
-    margin-left:9%;
+    /* margin-left:9%; */
     bottom: 30px;
 }
 #about-grid div{
