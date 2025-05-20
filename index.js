@@ -283,9 +283,9 @@ function projectPages(){
         
     });
 
-    document.getElementById('see-all-code').addEventListener('click',()=>{
-        window.location.href="/pages/coding.html";        
-    });
+    // document.getElementById('see-all-code').addEventListener('click',()=>{
+    //     window.location.href="/pages/coding.html";        
+    // });
     
 }
 
