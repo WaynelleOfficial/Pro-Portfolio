@@ -395,6 +395,7 @@ h2{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
+    column-gap: 0;
     height: 780px;
 }
 #about-grid h1{
