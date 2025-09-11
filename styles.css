@@ -992,9 +992,9 @@ canvas {
 .c-extra-P, .c-extra-C{
     margin-left: 2.3rem;
 }
-.c-extra li{
+/* .c-extra li{
     display: unset;
-}
+} */
 .c-extra h4{
     margin: 0;
 }
